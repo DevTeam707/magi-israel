@@ -8,13 +8,30 @@ body {
   font-family: "Inter Tight", sans-serif;
 }
 
+#translate {
+  position: fixed;
+  bottom: 0;
+  right: 10px;
+
+  padding: 10px;
+  font-family: inherit;
+
+  border: none;
+  color: #ffffff;
+  background-color: #1f1f1f;
+}
+
+.hidden {
+  display: none;
+}
+
 .section {
   transition: transform 1s, opacity 1s;
 }
 
 .section--hidden {
   opacity: 0;
-  transform: translateY(8rem);
+  transform: translateY(5rem);
 }
 
 * {
@@ -58,6 +75,21 @@ h2 {
   border-radius: 20px;
 }
 
+.btn-light {
+  padding: 10px 20px;
+  margin-top: 10px;
+  width: fit-content;
+
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: var(--neutral);
+  border: none;
+  border: var(--neutral) 10px 10px;
+  border-radius: 20px;
+}
+
 .star {
   position: fixed;
   z-index: 0;
@@ -66,7 +98,8 @@ h2 {
   width: 100px;
 }
 
-#navbar {
+#navbar-en,
+#navbar-hb {
   position: fixed;
   width: 100%;
 
@@ -87,11 +120,13 @@ h2 {
   font-size: 16px;
 }
 
-#logo {
+#logo-en,
+#logo-hb {
   max-height: 100px;
 }
 
-#hero {
+#hero-en,
+#hero-hb {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -136,7 +171,8 @@ h2 {
   width: 60%;
 }
 
-#about {
+#about-en,
+#about-hb {
   padding-bottom: 50px;
 }
 
@@ -186,7 +222,8 @@ h2 {
   padding-top: 70px;
 }
 
-#services > h2 {
+#services-en > h2,
+#services-hb > h2 {
   text-align: center;
   margin-block: 20px;
 }
@@ -227,11 +264,13 @@ h2 {
   padding-bottom: 15px;
 }
 
-#testimonies {
+#testimonies-en,
+#testimonies-hb {
   padding-bottom: 150px;
 }
 
-#testimonies > h2 {
+#testimonies-en > h2,
+#testimonies-hb > h2 {
   text-align: right;
   padding-inline: 100px;
   margin-bottom: 50px;
@@ -280,16 +319,19 @@ h2 {
   font-weight: 700;
 }
 
-#contact {
+#contact-en,
+#contact-hb {
   padding: 100px 50px;
 }
 
-#contact > h2 {
+#contact-en > h2,
+#contact-hb > h2 {
   font-weight: bold;
 }
 
 .contact-content {
   display: flex;
+  justify-content: space-around;
 }
 
 .contact-content > * {
@@ -329,7 +371,8 @@ marquee > a {
     display: none;
   }
 
-  #hero {
+  #hero-en,
+  #hero-hb {
     flex-direction: column-reverse;
     padding-top: 100px;
   }
@@ -377,12 +420,14 @@ marquee > a {
     padding: 10px 0px;
   }
 
-  #testimonies > h2 {
+  #testimonies-en > h2,
+  #testimonies-hb > h2 {
     padding-inline: 10px;
     margin-bottom: 0;
   }
 
-  #contact {
+  #contact-en,
+  #contact-hb {
     padding: 100px 20px;
   }
 
@@ -409,7 +454,8 @@ marquee > a {
     grid-template-columns: 1fr;
   }
 
-  #testimonies {
+  #testimonies-en,
+  #testimonies-hb {
     padding-bottom: 30px;
   }
 }
