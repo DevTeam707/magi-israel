@@ -15,6 +15,9 @@ body {
 
   padding: 10px;
   font-family: inherit;
+  font-size: 15px;
+
+  z-index: 10;
 
   border: none;
   color: #ffffff;
@@ -92,7 +95,6 @@ h2 {
 
 .star {
   position: fixed;
-  z-index: 0;
 
   right: 20px;
   width: 100px;
@@ -108,6 +110,7 @@ h2 {
 
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
 
   padding: 15px 10px;
 
@@ -215,11 +218,71 @@ h2 {
   padding-left: 20px;
 }
 
+.section-primary-2 {
+  color: var(--neutral);
+  background: linear-gradient(#5a0069, #34003d);
+
+  /* padding-top: 70px; */
+}
+
 .section-primary {
   color: var(--neutral);
-  background: linear-gradient(#5a0069, #2d0034);
+  background: linear-gradient(#34003d, #5a0069);
 
   padding-top: 70px;
+}
+
+.gallery {
+  display: flex;
+  padding: 2px;
+  transition: 0.3s;
+}
+.gallery:hover .gallery__image {
+  filter: grayscale(1);
+}
+.gallery__column {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+}
+.gallery__link {
+  margin: 2px;
+  overflow: hidden;
+}
+.gallery__link:hover .gallery__image {
+  filter: grayscale(0);
+}
+.gallery__link:hover .gallery__caption {
+  opacity: 1;
+}
+.gallery__thumb {
+  position: relative;
+}
+.gallery__image {
+  display: block;
+  width: 100%;
+  transition: 0.5s;
+  border-radius: 10px;
+}
+.gallery__image:hover {
+  transform: scale(1.1);
+}
+.gallery__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 25px 15px 15px;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  color: white;
+  opacity: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transition: 0.3s;
 }
 
 #services-en > h2,
