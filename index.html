@@ -28,14 +28,8 @@
 
     <link rel="stylesheet" type="text/css" href="src\css\styles.css" />
 
-    <!-- <script type="text/javascript" src="https://cdn.weglot.com/weglot.min.js"></script>
-    <script>
-        Weglot.initialize({
-            api_key: 'wg_ad2150fe4ed320ea0c554b267400ab915'
-        });
-    </script> -->
-
     <script defer src="src/js/scripts.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -59,54 +53,58 @@
 
         <section id="hero-en">
             <!-- <img src="src\img\hero-bg.jpg" alt="hero background" class="bg-hero"> -->
-            <img src="src\img\israel-1.png" alt="israel-1" class="img-hero">
+            <!-- <img src="src\img\israel-1.png" alt="israel-1" class="img-hero"> -->
+            <video id="background-video" autoplay loop muted>
+                <source src="src\vid\hero-bg.mp4" type="video/mp4">
+            </video>
             <div class="content-hero">
                 <h2 style="margin: 0;">Be Wise</h2>
                 <h1>Follow The Star</h1>
-                <a class="btn-primary" href="#contact">Book Now</a>
+                <a class="btn-primary" href="#contact-en">Book Now</a>
             </div>
         </section>
 
-        <section id="about-en" class=" section section-neutral">
+        <section id="about-en" class="section section-neutral">
             <div class="about">
-                <img src="src\img\israel-2.png" alt="israel-2" class="img-about">
+                <img src="src\img\israel-5.png" alt="israel-5" class="img-about">
                 <div class="content-about">
                     <h2>Why Magi?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ipsum interdum, feugiat
+                    <p class="text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ipsum
+                        interdum, feugiat
                         nibh
                         vitae, semper eros. Integer sodales sagittis nulla sit amet blandit. Suspendisse potenti. Ut
                         egestas
                         diam vitae dignissim aliquam. Nullam ultrices dolor sit amet eros finibus aliquam. Fusce sed
                         mollis
                         diam. Praesent nec erat eu nisi tempor faucibus condimentum bibendum lacus.</p>
+
+                    <div class="feature-group">
+                        <div class="feature">
+                            <img src="src\icons\clock.png" alt="on-time" class="feature-icon">
+                            <h4 class="feature-name">On Time</h4>
+                        </div>
+                        <div class="feature">
+                            <img src="src\icons\support.png" alt="customer-support" class="feature-icon">
+                            <h4 class="feature-name">Customer Support</h4>
+                        </div>
+                        <div class="feature">
+                            <img src="src\icons\worldwide.png" alt="global-network" class="feature-icon">
+                            <h4 class="feature-name">Global Network</h4>
+                        </div>
+                        <div class="feature">
+                            <img src="src\icons\hand.png" alt="value-for-money" class="feature-icon">
+                            <h4 class="feature-name">Value for Money</h4>
+                        </div>
+                        <div class="feature">
+                            <img src="src\icons\customer.png" alt="customer-first" class="feature-icon">
+                            <h4 class="feature-name">Customer First</h4>
+                        </div>
+                        <div class="feature">
+                            <img src="src\icons\help.png" alt="local-guides" class="feature-icon">
+                            <h4 class="feature-name">Local Guides</h4>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="feature-group">
-                <div class="feature">
-                    <img src="src\icons\clock.png" alt="on-time" class="feature-icon">
-                    <h4 class="feature-name">On Time</h4>
-                </div>
-                <div class="feature">
-                    <img src="src\icons\support.png" alt="customer-support" class="feature-icon">
-                    <h4 class="feature-name">Customer Support</h4>
-                </div>
-                <div class="feature">
-                    <img src="src\icons\worldwide.png" alt="global-network" class="feature-icon">
-                    <h4 class="feature-name">Global Network</h4>
-                </div>
-                <div class="feature">
-                    <img src="src\icons\hand.png" alt="value-for-money" class="feature-icon">
-                    <h4 class="feature-name">Value for Money</h4>
-                </div>
-                <div class="feature">
-                    <img src="src\icons\customer.png" alt="customer-first" class="feature-icon">
-                    <h4 class="feature-name">Customer First</h4>
-                </div>
-                <div class="feature">
-                    <img src="src\icons\help.png" alt="local-guides" class="feature-icon">
-                    <h4 class="feature-name">Local Guides</h4>
-                </div>
-            </div>
         </section>
 
         <section id="gallery-en" class="section section-primary-2">
@@ -114,6 +112,13 @@
 
             <div class="gallery">
                 <div class="gallery__column">
+                    <a href="https://www.pexels.com/photo/person-sitting-on-mountain-cliff-1659438/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery2.jpg" alt="Photo by M Venter" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by M Venter</figcaption>
+                        </figure>
+                    </a>
                     <a href="https://www.pexels.com/photo/man-and-woman-walks-on-dock-1268855/" target="_blank"
                         class="gallery__link">
                         <figure class="gallery__thumb">
@@ -369,20 +374,29 @@
             <h2>Contact Us</h2>
             <hr class="hr-light">
             <div class="contact-content">
-                <div class="social">
-                    <p>contact@magiholidaysisrael.com</p>
-                    <p>+91 1234567890</p>
-                </div>
-                <div class="address">
-                    <p>34, Daniel Moritz St, TEL AVIV, TEL AVIV 6934588, IL</p>
-                </div>
                 <div class="newsletter">
-                    <p>Subscribe to our Newsletter</p>
+                    <h2>Subscribe to our Newsletter</h2>
                     <div class="newletter-input">
                         <input type="text" placeholder="Email Address">
                         <button class="subscribe btn-light">Subscribe</button>
                     </div>
                 </div>
+                <div class="social">
+                    <p><strong>Email : </strong><br>contact@magiholidaysisrael.com</p><br>
+                    <p><strong>Mobile : </strong><br>+91 1234567890</p><br>
+                    <p><strong>Address : </strong><br>34, Daniel Moritz St, TEL AVIV, TEL AVIV 6934588, IL</p>
+                </div>
+                <form id="contact-form">
+                    <h2>Get in touch!</h2>
+                    <input type="hidden" name="contact_number"><br>
+                    <label>Name</label><br>
+                    <input type="text" name="user_name"><br>
+                    <label>Email</label><br>
+                    <input type="email" name="user_email"><br>
+                    <label>Message</label><br>
+                    <textarea name="message"></textarea><br>
+                    <input class="submit btn-light" type="submit" value="Send">
+                </form>
             </div>
 
             <p>Website crafted by Elviin Thomas Eldho</p>
@@ -390,6 +404,7 @@
         </section>
 
         <marquee>
+            Video by <a href="https://www.pexels.com/@jakoblundvall/">Jakob Lundvall</a>
             Icons made by <a href="https://www.flaticon.com/authors/turkkub" title="turkkub">turkkub</a>, <a
                 href="https://www.freepik.com" title="Freepik">Freepik</a> and <a
                 href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a
@@ -452,52 +467,156 @@
 
         <section id="hero-hb">
             <!-- <img src="src\img\hero-bg.jpg" alt="hero background" class="bg-hero"> -->
-            <img src="src\img\israel-1.png" alt="israel-1" class="img-hero">
+            <video id="background-video" autoplay loop muted>
+                <source src="src\vid\hero-bg.mp4" type="video/mp4">
+            </video>
             <div class="content-hero">
                 <h2 style="margin: 0;">היו חכמים</h2>
                 <h1>עקוב אחר הכוכב</h1>
-                <a class="btn-primary" href="#contact">הזמן עכשיו</a>
+                <a class="btn-primary" href="#contact-hb">הזמן עכשיו</a>
             </div>
         </section>
 
-        <section id="about-hb" class=" section section-neutral">
+        <section id="about-hb" class="section section-neutral">
             <div class="about">
-                <img src="src\img\israel-2.png" alt="israel-2" class="img-about">
+                <img src="src\img\israel-5.png" alt="israel-5" class="img-about">
                 <div class="content-about">
                     <h2>למה מאגי?</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ipsum interdum, feugiat
+                    <p class="text-about">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae ipsum
+                        interdum, feugiat
                         nibh
                         vitae, semper eros. Integer sodales sagittis nulla sit amet blandit. Suspendisse potenti. Ut
                         egestas
                         diam vitae dignissim aliquam. Nullam ultrices dolor sit amet eros finibus aliquam. Fusce sed
                         mollis
                         diam. Praesent nec erat eu nisi tempor faucibus condimentum bibendum lacus.</p>
+
+                    <div class="feature-group">
+                        <div class="feature">
+                            <img src="src\icons\clock.png" alt="on-time" class="feature-icon">
+                            <h4 class="feature-name">בזמן</h4>
+                        </div>
+                        <div class="feature">
+                            <img src="src\icons\support.png" alt="customer-support" class="feature-icon">
+                            <h4 class="feature-name">שירות לקוחות</h4>
+                        </div>
+                        <div class="feature">
+                            <img src="src\icons\worldwide.png" alt="global-network" class="feature-icon">
+                            <h4 class="feature-name">רשת גלובלית</h4>
+                        </div>
+                        <div class="feature">
+                            <img src="src\icons\hand.png" alt="value-for-money" class="feature-icon">
+                            <h4 class="feature-name">תמורה לכסף</h4>
+                        </div>
+                        <div class="feature">
+                            <img src="src\icons\customer.png" alt="customer-first" class="feature-icon">
+                            <h4 class="feature-name">הלקוח ראשון</h4>
+                        </div>
+                        <div class="feature">
+                            <img src="src\icons\help.png" alt="local-guides" class="feature-icon">
+                            <h4 class="feature-name">מדריכים מקומיים</h4>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="feature-group">
-                <div class="feature">
-                    <img src="src\icons\clock.png" alt="on-time" class="feature-icon">
-                    <h4 class="feature-name">בזמן</h4>
+        </section>
+
+
+        <section id="gallery-hb" class="section section-primary-2">
+            <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap" rel="stylesheet">
+
+            <div class="gallery">
+                <div class="gallery__column">
+                    <a href="https://www.pexels.com/photo/person-sitting-on-mountain-cliff-1659438/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery2.jpg" alt="Photo by M Venter" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by M Venter</figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://www.pexels.com/photo/man-and-woman-walks-on-dock-1268855/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery3.jpg" alt="Photo by Aleksandar Pasaric" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by Aleksandar Pasaric</figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://www.pexels.com/photo/person-sitting-on-mountain-cliff-1659438/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery2.jpg" alt="Photo by M Venter" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by M Venter</figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://www.pexels.com/photo/man-and-woman-walks-on-dock-1268855/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery1.jpg" alt="Photo by Asad Photo Maldives" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by Asad Photo Maldives</figcaption>
+                        </figure>
+                    </a>
                 </div>
-                <div class="feature">
-                    <img src="src\icons\support.png" alt="customer-support" class="feature-icon">
-                    <h4 class="feature-name">שירות לקוחות</h4>
+                <div class="gallery__column">
+                    <a href="https://www.pexels.com/photo/saint-basil-s-cathedral-753339/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery10.jpg" alt="Photo by Julius Silver" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by Julius Silver</figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://www.pexels.com/photo/gray-and-brown-boat-traveling-on-man-made-river-586687/"
+                        target="_blank" class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery11.jpg" alt="Photo by David Bartus" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by David Bartus</figcaption>
+                        </figure>
+                    </a>
                 </div>
-                <div class="feature">
-                    <img src="src\icons\worldwide.png" alt="global-network" class="feature-icon">
-                    <h4 class="feature-name">רשת גלובלית</h4>
+                <div class="gallery__column">
+                    <a href="https://www.pexels.com/photo/maldives-island-1450340/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery4.jpg" alt="Photo by Asad Photo Maldives" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by Asad Photo Maldives</figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://www.pexels.com/photo/woman-taking-pictures-of-ruins-2087391/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery5.jpg" alt="Photo by Haley Black" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by Haley Black</figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://www.pexels.com/photo/bridge-near-waterfall-358457/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery9.jpg" alt="Photo by Pixabay" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by Pixabay</figcaption>
+                        </figure>
+                    </a>
                 </div>
-                <div class="feature">
-                    <img src="src\icons\hand.png" alt="value-for-money" class="feature-icon">
-                    <h4 class="feature-name">תמורה לכסף</h4>
-                </div>
-                <div class="feature">
-                    <img src="src\icons\customer.png" alt="customer-first" class="feature-icon">
-                    <h4 class="feature-name">הלקוח ראשון</h4>
-                </div>
-                <div class="feature">
-                    <img src="src\icons\help.png" alt="local-guides" class="feature-icon">
-                    <h4 class="feature-name">מדריכים מקומיים</h4>
+                <div class="gallery__column">
+                    <a href="https://www.pexels.com/photo/boats-and-body-of-water-417344/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery7.jpg" alt="Photo by Pixabay" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by Pixabay</figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://www.pexels.com/photo/derawar-fort-at-sunset-815880/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery8.jpg" alt="Photo by Syed Hasan Mehdi" class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by Syed Hasan Mehdi</figcaption>
+                        </figure>
+                    </a>
+                    <a href="https://www.pexels.com/photo/photo-of-a-man-sitting-under-the-tree-737586/" target="_blank"
+                        class="gallery__link">
+                        <figure class="gallery__thumb">
+                            <img src="src/img/gallery6.jpg" alt="Photo by Admiral General M. " class="gallery__image">
+                            <figcaption class="gallery__caption">Photo by Admiral General M. ⭐⭐⭐⭐⭐ GodShepherdly
+                            </figcaption>
+                        </figure>
+                    </a>
                 </div>
             </div>
         </section>
@@ -507,12 +626,12 @@
             <hr class="hr-neutral">
             <div class="service-group">
                 <div class="service">
-                    <img src="src\img\departure.jpg" alt="fixed-departures" class="service-img">
+                    <img src="src\img\departure-1.jpg" alt="fixed-departures" class="service-img">
                     <h5 class="service-title">יציאות קבועות</h5>
                     <p class="service-desc">יעדים אקזוטיים מרחבי העולם שנבחרו בקפידה ונארזים עבורך</p>
                 </div>
                 <div class="service">
-                    <img src="src\img\pilgrimage.jpg" alt="pilgrimages" class="service-img">
+                    <img src="src\img\pilgrimage-1.jpg" alt="pilgrimages" class="service-img">
                     <h5 class="service-title">עלייה לרגל</h5>
                     <p class="service-desc">ליבנו יהיה חסר מנוחה עד שהוא ינוח באלוהים. לעשות את המסע הרוחני
                         אתה
@@ -520,46 +639,46 @@
                     </p>
                 </div>
                 <div class="service">
-                    <img src="src\img\medical.jpg" alt="medical-tourism" class="service-img">
+                    <img src="src\img\medical-1.jpg" alt="medical-tourism" class="service-img">
                     <h5 class="service-title">תיירות רפואית</h5>
                     <p class="service-desc">Magi Holidays יחד עם Medlounges - השותף שלנו לתיירות מרפא, מציע לך
                         ה
                         הטיפול הרפואי הטוב ביותר ללא טרחה לוגיסטית</p>
                 </div>
                 <div class="service">
-                    <img src="src\img\corporate.jpg" alt="corporate-travel" class="service-img">
+                    <img src="src\img\corporate-1.jpg" alt="corporate-travel" class="service-img">
                     <h5 class="service-title">נסיעות תאגידיות</h5>
                     <p class="service-desc">אנו נאפשר לך להתמקד בעסקים בזמן שאנו מטפלים בצרכי הנסיעה שלך בזהירות רבה
                     </p>
                 </div>
                 <div class="service">
-                    <img src="src\img\cruise.jpg" alt="luxury-cruise" class="service-img">
+                    <img src="src\img\cruise-1.jpg" alt="luxury-cruise" class="service-img">
                     <h5 class="service-title">שייט יוקרתי</h5>
                     <p class="service-desc">התענגו על ראוותנות! שייט יוקרתי לבחירתכם</p>
                 </div>
                 <div class="service">
-                    <img src="src\img\holidays.jpg" alt="holidays" class="service-img">
+                    <img src="src\img\holidays-1.jpg" alt="holidays" class="service-img">
                     <h5 class="service-title">חגים</h5>
                     <p class="service-desc">הטבע היפה מזמין! תכננו את החופשות שלכם עם Magi</p>
                 </div>
                 <div class="service">
-                    <img src="src\img\adventure.jpg" alt="adventure" class="service-img">
+                    <img src="src\img\adventure-1.jpg" alt="adventure" class="service-img">
                     <h5 class="service-title">הרפתקה</h5>
                     <p class="service-desc">החזיקו את פרץ האדרנלין שלכם. יש לנו הרבה מה להציע למי שאוהב הרפתקאות</p>
                 </div>
                 <div class="service">
-                    <img src="src\img\ticket.jpg" alt="visa-ticket" class="service-img">
+                    <img src="src\img\ticket-1.jpg" alt="visa-ticket" class="service-img">
                     <h5 class="service-title">ויזה / כרטיס</h5>
                     <p class="service-desc">אנשי המקצוע שלנו יתחייבו לכל צרכי הנסיעה שלך... תמיד עם חיוך</p>
                 </div>
                 <div class="service">
-                    <img src="src\img\crew.jpg" alt="crew-location" class="service-img">
+                    <img src="src\img\crew-1.jpg" alt="crew-location" class="service-img">
                     <h5 class="service-title">צוות ומיקום</h5>
                     <p class="service-desc">אנו עוזרים לזהות מיקומים ברחבי העולם עבור קולנוע וצילומים ו
                         לבצע ניהול צוות</p>
                 </div>
                 <div class="service">
-                    <img src="src\img\museum_kids_02.jpg" alt="educational-tours" class="service-img">
+                    <img src="src\img\museum-1.jpg" alt="educational-tours" class="service-img">
                     <h5 class="service-title">סיורים לימודיים</h5>
                     <p class="service-desc">אנו מארגנים סיורים חינוכיים ופנאי לסטודנטים, מכללות,
                         אוניברסיטאות ומכונים אחרים</p>
@@ -659,24 +778,33 @@
             </div>
         </section>
 
-        <section id="contact-hb" class="section section-primary">
+        <section id="contact-hb" class="section section-primary-2">
             <h2>צור קשר</h2>
             <hr class="hr-light">
             <div class="contact-content">
-                <div class="social">
-                    <p>contact@magiholidaysisrael.com</p>
-                    <p>+91 1234567890</p>
-                </div>
-                <div class="address">
-                    <p>דניאל מוריץ 34, תל אביב, תל אביב 6934588, אילינוי</p>
-                </div>
                 <div class="newsletter">
-                    <p>הירשם לניוזלטר שלנו</p>
+                    <h2>הירשם לניוזלטר שלנו</h2>
                     <div class="newletter-input">
                         <input type="text" placeholder="Email Address">
-                        <button class="subscribe btn-light">הירשם</button>
+                        <button class="subscribe btn-light">להירשם</button>
                     </div>
                 </div>
+                <div class="social">
+                    <p><strong>אימייל : </strong><br>contact@magiholidaysisrael.com</p><br>
+                    <p><strong>נייד : </strong><br>+91 1234567890</p><br>
+                    <p><strong>כתובת : </strong><br>34, Daniel Moritz St, TEL AVIV, TEL AVIV 6934588, IL</p>
+                </div>
+                <form id="contact-form">
+                    <h2>נהיה בקשר!</h2>
+                    <input type="hidden" name="contact_number"><br>
+                    <label>שֵׁם</label><br>
+                    <input type="text" name="user_name"><br>
+                    <label>אימייל</label><br>
+                    <input type="email" name="user_email"><br>
+                    <label>הוֹדָעָה</label><br>
+                    <textarea name="message"></textarea><br>
+                    <input class="submit btn-light" type="submit" value="Send">
+                </form>
             </div>
 
             <p>האתר נבנה על ידי אלווין תומאס אלדהו</p>
@@ -684,6 +812,7 @@
         </section>
 
         <marquee>
+            סרטון מאת <a href="https://www.pexels.com/@jakoblundvall/">Jakob Lundvall</a>
             אייקונים שנעשו על ידי <a href="https://www.flaticon.com/authors/turkkub" title="טורקיקוב">turkkub</a>, <a
                 href="https://www.freepik.com/" title="פריפיק">Freepik</a> ואת <a
                 href="https://www.flaticon.com/authors/those-icons" title="הסמלים האלה">הסמלים האלה</a> מ <a
