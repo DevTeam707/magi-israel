@@ -275,6 +275,12 @@ h2 {
   padding: 2px;
   transition: 0.3s;
 }
+
+#gallery-en,
+#gallery-hb {
+  background: linear-gradient(var(--neutral), #34003d);
+}
+
 .gallery:hover .gallery__image {
   filter: grayscale(1);
 }
