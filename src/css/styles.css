@@ -166,7 +166,7 @@ h2 {
 }
 
 .mobile {
-  display: hidden;
+  display: none;
 }
 
 .content-hero {
