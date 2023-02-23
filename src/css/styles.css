@@ -202,6 +202,10 @@ h2 {
   align-items: center;
 }
 
+.img-about {
+  width: 100%;
+}
+
 .content-about {
   width: 80%;
   margin: 50px 40px;
