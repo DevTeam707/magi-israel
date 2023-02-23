@@ -152,7 +152,7 @@ h2 {
 }
 
 .background-video {
-  width: 100%;
+  width: 100vw;
   /* height: 387px; */
   object-fit: cover;
   position: absolute;
@@ -160,6 +160,7 @@ h2 {
   right: 0;
   top: 0;
   bottom: 0;
+  /* transform: translateY(-30vw); */
   z-index: -1;
   overflow: hidden;
 }
