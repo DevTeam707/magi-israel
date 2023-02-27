@@ -1,4 +1,4 @@
-// const allSections = document.querySelectorAll(".section");
+const allSections = document.querySelectorAll(".section");
 
 // const revealSection = function (entries, observor) {
 //   const [entry] = entries;
